@@ -1,0 +1,64 @@
+.admin {
+  width: 100vw;
+  height: 500px;
+  color: #DECAAF;
+  text-align: center;
+  font-size: 22px; }
+
+.filter {
+  width: 80%;
+  height: 400px;
+  margin: auto; }
+
+#query {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  outline: 0; }
+  #query:hover {
+    background: #DECAAF;
+    border-radius: 5px;
+    box-shadow: -1px 0 20px 5px #DECAAF, 1px 0 #DECAAF, 0 -1px #DECAAF, 0 1px #DECAAF; }
+
+.boxes {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center; }
+  .boxes input {
+    width: 200px;
+    height: 48px;
+    margin-top: 10px;
+    border-radius: 5px; }
+
+.listdisplay {
+  width: 100%;
+  height: 300px;
+  color: #DECAAF;
+  display: flex;
+  flex-direction: column; }
+
+.listitem {
+  overflow: hidden;
+  font-size: 16px;
+  border: 1px solid #DECAAF;
+  padding: 10px; }
+
+#notify {
+  width: 90px;
+  border-radius: 5px;
+  align-self: center;
+  box-shadow: inset 0 0 10px grey; }
+  #notify:hover {
+    background: grey;
+    color: white;
+    box-shadow: inset 0 0 10px white; }
+
+#charts {
+  color: #DECAAF;
+  text-decoration: none;
+  position: absolute;
+  top: 25px;
+  left: 40px;
+  font-size: 18px; }

@@ -1,0 +1,292 @@
+.container {
+    width: 100vw;
+    height: 3900px;
+    background: black;
+    color: #DECAAF;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.container p{
+    padding: 25px;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: 0 -1px 20px 5px #393938, 0 1px 20px 5px #920404; 
+    position: relative;
+    padding: 50px;
+}
+
+.navigation{
+    position: fixed;
+    z-index: 10;
+    top:0;
+    right:0;
+    display: flex;
+    width: 250px;
+    justify-content: space-around;
+    margin-top: 12px;
+    margin-right: 12px;
+    color: #DECAAF;
+}
+
+.navigation img{
+    width: 50px;
+    height: 50px;
+}
+
+#sun{
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+#sun #suntext{
+    width: 120px;
+    visibility: hidden;
+    background: transparent;
+    color: #DECAAF;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+#sun:hover #suntext{
+    visibility: visible;
+}
+
+#phobos{
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+#phobos #phobostext{
+    width: 120px;
+    visibility: hidden;
+    background: transparent;
+    color: #DECAAF;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    margin-top: 50px;
+    border-radius: 5px;
+    padding-right: 55px;
+}
+
+#phobos:hover #phobostext{
+    visibility: visible;
+}
+
+#why{
+    width: 30%;
+    height: 100px;
+    margin-left: 67vw;
+    padding: 20px;
+}
+
+#possibility{
+    width: 30%;
+    height: 100px;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+#BFR{
+    width: 30%;
+    height: 120px;
+    margin-left: 67vw;
+    padding: 20px;
+}
+
+.sideBar{
+    position: fixed;
+    top: 40px;
+    left: 1000px;
+}
+
+.parallax {
+    background: url('../marshorizon.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 72vh;
+    top:800px;
+}
+
+.pic2{
+    background: url('../glowingmars.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+    z-index: 1;
+}
+
+.pic3{
+    background: url('../marspeople.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+.pic4{
+    background: url('../photos/bfrlaunch.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+.spaceX{
+    background: url('../photos/spaceX.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 70vh;
+}
+
+.contactUs{
+    height: 175px;
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-around; 
+    box-shadow: 0 -1px 20px 5px #393938, 0 1px 20px 5px #920404 ; 
+    position: relative;
+    padding-bottom: 45px;
+}
+
+.contactUs p{
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+
+.homebuttons{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+#signup{
+    width: 90px;
+    margin-right: 40px;
+    margin-top: 10px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    background:rgb(190, 184, 177);
+    color:black;
+    box-shadow: 0 -1px 20px 5px #393938, 0 1px 20px 5px #920404;     
+    overflow: hidden;
+    font-size: 14px;
+    padding-top: 3px;
+    outline: none;
+
+}
+
+#signup:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 70%;
+    height: 100%;
+    background: rgba(253,253,253, 0.3);
+    transition: .4s;
+    transform: skewX(-15deg);
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  #signup:hover:before{
+    left: 210px;
+  }
+
+  #signup:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 50px;
+    height: 100%;
+    background: rgba(253,253,253, 0.3);    
+    transition: .6s;
+    transform: skewX(-15deg);
+    transition-delay: 0.2s;
+  }
+
+  #signup:hover:after{
+      left: 210px;
+  }
+
+#email{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    background:rgb(190, 184, 177);
+    color:black;
+    box-shadow: 0 -1px 20px 5px #393938, 0 1px 20px 5px #920404;     
+    overflow: hidden;
+    font-size: 14px;
+    padding-top: 3px;
+    outline: 0;
+}
+
+#email:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 70%;
+    height: 100%;
+    background: rgba(253,253,253, 0.3);
+    transition: .4s;
+    transform: skewX(-15deg);
+    overflow: hidden;
+    border-radius: 5px;
+  }
+
+  #email:hover:before{
+    left: 210px;
+  }
+
+  #email:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: -70px;
+    width: 50px;
+    height: 100%;
+    background: rgba(253,253,253, 0.3);    
+    transition: .6s;
+    transform: skewX(-15deg);
+    transition-delay: 0.2s;
+  }
+
+  #email:hover:after{
+      left: 210px;
+  }
+
+.contactUs button{
+    align-self: center;
+}
+
+.dialog{
+    text-align: left !important;
+}
+
+.dialogButton{
+    text-align: right !important;
+}
+
+#emaildialog div{
+    background: gray !important;
+}

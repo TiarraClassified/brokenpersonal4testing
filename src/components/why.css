@@ -1,0 +1,60 @@
+.image-paragraph-div, .bluedawnContainer, .reasons, .cheaperRockets {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+  width: 100vw; }
+  .image-paragraph-div p, .bluedawnContainer p, .reasons p, .cheaperRockets p {
+    margin: 20px; }
+  .image-paragraph-div img, .bluedawnContainer img, .reasons img, .cheaperRockets img {
+    margin: 20px; }
+
+.why {
+  width: 100vw;
+  height: 5000px;
+  background-color: black;
+  padding-top: 10px;
+  overflow: hidden;
+  color: black;
+  font-size: 18px;
+  line-height: 1.5; }
+
+.shadow {
+  box-shadow: -1px 0 20px 5px #DECAAF, 1px 0 #DECAAF, 0 -1px #DECAAF, 0 1px #DECAAF; }
+
+.bluedawnContainer {
+  height: 400px; }
+  .bluedawnContainer .footer {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px; }
+    .bluedawnContainer .footer img {
+      width: 95%;
+      height: 300px; }
+    .bluedawnContainer .footer p {
+      margin-top: 0px;
+      padding: 0 !important; }
+
+h1 {
+  height: 90px;
+  width: 100vw;
+  display: flex;
+  flex-direction: space-around; }
+
+h1 p {
+  width: 100vw;
+  height: 90px;
+  padding-left: 100px;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 50px; }
+
+.reasons {
+  height: 400px; }
+
+.reasons img {
+  width: 45vw;
+  height: 300px; }
+
+.cheaperRockets iframe {
+  margin-top: 20px; }

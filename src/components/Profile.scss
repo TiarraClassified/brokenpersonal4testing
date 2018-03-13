@@ -1,0 +1,148 @@
+$textcolor: #DECAAF;
+
+.profile{
+    background: linear-gradient(rgba(0,0,0,1),rgba(221, 128, 74, 0.4));
+    width: 100vw;
+    height: 100vh;
+    color: $textcolor;
+}
+
+.profileconst{
+    width: 100%;
+    text-align: center;
+}
+
+hr{
+    color: $textcolor;
+    box-shadow: -1px 0 20px 2px #DECAAF, 1px 0 #DECAAF, 0 -1px #DECAAF, 0 1px #DECAAF;
+}
+
+.dialog hr {
+  border-color: #DECAAF !important;
+}
+
+.dialog label {
+  color: #DECAAF !important;
+}
+
+.backbutton{
+  color: $textcolor;
+  width: 50px;
+  height: 30px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+// Config: Ease
+$ease-cb: cubic-bezier(.19,1,.22,1);
+
+//--------------------------
+//  nth-trans-delay()
+//  @description: Transition Delay on nth-childs
+//  @param: $delay_items: [7]    - number of nth-of-type items to create
+//  @param: $delay_time:[1.5s]   - transition-dealy value
+//--------------------------
+@mixin nth-trans-delay($delay_items: 7, $delay_time: 0.2s){
+@for $i from 1 through $delay_items {
+  &:nth-child(#{$i}) {   
+   transition-delay: $delay_time * $i; 
+  }
+ }
+}
+
+//--------------------------
+//  nth-ani-delay()
+//  @description: Animation Delay on nth-childs
+//  @param: $delay_items: [7] - number of nth-of-type items to create
+//  @param: $delay_time:[1.5s] - transition-dealy value
+//--------------------------
+@mixin nth-ani-delay($delay_items: 7, $delay_time: 0.2s){
+@for $i from 1 through $delay_items {
+  &:nth-child(#{$i}) {   
+   animation-delay: $delay_time * $i; 
+  }
+ }
+}
+//--------------------------
+//  bg-overlay()
+//  @description:pseduo overlay element  
+//  @param: $bg_hex: [$color-dark] - hex value for rgba conversion
+//  @param: $bg_opacity:[0.6] - alpha transparency level
+//  @param: $top_layer: element or class name for higher z-index layer
+//--------------------------
+@mixin bg-overlay($bg_hex: #111, $bg_opacity: 0.6, $top_layer: 'header') {
+  &:after {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($bg_hex, $bg_opacity);
+  }
+  
+  // Layer atop overlay
+  & > #{$top_layer}{
+    z-index: 2;
+    position: relative;
+  }
+}
+//Setups
+*, *:before, *:after {
+  box-sizing: border-box; 
+}
+
+.greeting{
+    width: 100vw;
+    height: 150px;
+    padding-top: 50px;
+    font-size: 50px;
+    align-items: center;
+}
+
+.mast{
+  position: relative;
+  display:flex;
+  align-items: center; 
+  
+  &__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: 50%;
+  }
+  
+  //Letter animation
+  &__text{
+    font-size: 1em;
+    margin: 0 0 0.5em;
+    line-height: 1.5;
+    white-space: pre;
+  }
+  
+  &__text span{
+    font-size: 50px;
+    align-self: center;
+    animation: letter-glow 0.7s 0s ease both;
+    @include nth-ani-delay(180, 0.05s);
+  }
+}
+
+
+// Letter Glow
+@keyframes letter-glow{
+  0%   { opacity: 0; text-shadow: 0px 0px 1px rgba(255,255,255,0.1)}
+  66%  { opacity: 1; text-shadow: 0px 0px 20px rgba(255,255,255,0.9) }
+  77%   { opacity: 1;  }
+  100% { opacity:0.7; text-shadow: 0px 0px 20px rgba(255,255,255,0.0)}
+}
+
+
+

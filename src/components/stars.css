@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+.stars {
+  background-image: url("../photos/stars.jpg");
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+  background-attachment: fixed;
+  perspective: 500px;
+  overflow: hidden; }
+
+.destination {
+  z-index: 10;
+  font-size: 55px;
+  color: white;
+  position: fixed;
+  left: 65%;
+  top: 100px;
+  font-family: 'Titillium Web', sans-serif; }
+
+@keyframes animate-background {
+  to {
+    top: 100px;
+    right: 0;
+    left: 65%;
+    bottom: 0; } }
+
+.mars {
+  background-image: url("../photos/marstransparent.png");
+  position: absolute;
+  z-index: 10;
+  width: 400px;
+  height: 100vh;
+  background-repeat: no-repeat;
+  top: 400px;
+  left: 65%;
+  animation: animate-background linear 30s;
+  animation-fill-mode: forwards; }
+
+@keyframes animate-deathstar {
+  from {
+    top: 250px;
+    left: -80px;
+    right: 0;
+    bottom: 0; }
+  to {
+    top: 1000px;
+    left: 500px;
+    right: 0;
+    bottom: 0; } }
+
+.deathstar {
+  background-image: url("../photos/deathstar.png");
+  position: absolute;
+  z-index: 10;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 100vh;
+  top: 350px;
+  left: -80px;
+  right: 0;
+  bottom: 0;
+  animation: animate-deathstar linear 30s infinite; }
+
+@keyframes animate-asteroid1 {
+  to {
+    transform: translateZ(-1820px) translateY(-1500px) translateX(100px) rotate(744deg);
+    top: -20%; } }
+
+@keyframes animate-asteroid2 {
+  to {
+    transform: translateZ(-1820px) translateY(-1500px) translateX(100px) rotate(558deg);
+    top: -20%; } }
+
+.asteroid1 {
+  background-image: url("../photos/asteriod2.png");
+  width: 100px;
+  height: 150px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 77%;
+  left: 20%;
+  animation: animate-asteroid1 linear 20s;
+  animation-fill-mode: forwards; }
+
+.asteroid2 {
+  top: 95%;
+  left: 25%;
+  background-image: url("../photos/asteriod3.png");
+  width: 100px;
+  height: 150px;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: animate-asteroid2 linear 23s;
+  animation-fill-mode: forwards; }

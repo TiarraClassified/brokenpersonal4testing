@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+#nosecone{
+    background-image: url('./nose-cone3.png');
+    width: 550px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+    left: 45%;
+    // left: 785px;
+    right: 0;
+    bottom: 0;
+
+}
+
+#spacecraft{
+    background-image: url('./spacecraft.png');
+    width: 550px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    z-index: 5;
+    position: absolute;
+    top: 142px;
+    left: calc(45% - 50px);
+    // left: 735px;
+    right: 0;
+    bottom: 0;
+
+}
+
+#trunk{
+    background-image: url('./trunk.png');
+    width: 550px;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    z-index:8;
+    position: absolute;
+    top: 311px;
+    left: calc(45% - 50px);
+    // left: 735px;
+    right: 0;
+    bottom: 0;
+}
+
+.flame{
+    transform: rotate(180deg);
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 470px;
+    left: calc(45% - 140px);
+    // left: 645px;
+    width: 400px;
+    height: 365px;
+}
+
+.text{
+    width: 100%;
+    height: 50px;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.rocketcontainer{
+    height: 2300px;
+    width: 100%;
+    position: relative;
+    background-image: url('../photos/stars.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    overflow: hidden;
+}
+
+.rocketcontainer p{
+    position: absolute;
+    top: 1800px;
+    font-size: 40px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+#solarninja{
+    display: hidden;
+    top: 1132px;
+    position: absolute;
+}
+
+//attempting SCSS
+
+$fadeUp: 100px;
+$fallDown: -100px;
+$delay: 30ms;
+$duration: 3s;
+
+#solarpanels{
+    background-image: url('./solarSequence.png');
+    width: 1000px;
+    margin-left: 150px;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    z-index: 5;
+    position: absolute;
+    top: 1132px;
+    left: calc(45% - 528px);
+    // left: 257px;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    display: flex;
+
+    div {
+        margin: 5px;
+        margin-top: 225px;
+        font-size: 45px;
+    }
+}
+
+.words{
+    transition: transform $duration cubic-bezier(.43,.1,.57,.9), filter $duration ease, opacity $duration ease;
+    filter: blur(5px);
+    
+      &:nth-of-type(2){
+        transform: translateY($fallDown + 40px);
+        transition-duration: $duration/2;
+      }
+      &:nth-of-type(3){
+        filter: blur(0);
+        transform: translateY($fallDown + 30px);
+        transition-duration: $duration/1.3;
+      }
+      &:nth-of-type(4){
+        transform: translateY($fallDown);
+        transition-duration: $duration/1.5;
+      }
+      &:nth-of-type(5){
+        transform: translateY($fallDown + 50px);
+        transition-duration: $duration/2;
+      }
+      &:nth-of-type(6){
+        filter: blur(0);
+        transform: translateY($fadeUp + 20px);
+        transition-duration: $duration/2.3;
+      }
+      &:nth-of-type(7){
+        filter: blur(3);
+        transform: translateY($fallDown + 20px);
+        transition-duration: $duration/2.1;
+      }
+      &:nth-of-type(8){
+        transform: translateY($fallDown + 50px);
+        transition-duration: $duration/2;
+      }
+      &:nth-of-type(9){
+        filter: blur(4);
+        transform: translateY($fadeUp + 50px);
+        transition-duration: $duration/2.5;
+      }
+      &:nth-of-type(10){
+        filter: blur(6);
+        transform: translateY($fadeUp + 50px);
+        transition-duration: $duration/1.4;
+      }
+}
+
+

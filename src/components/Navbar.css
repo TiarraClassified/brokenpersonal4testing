@@ -1,0 +1,43 @@
+
+.nav-bar {
+    width: 100vw;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+   
+}
+.logobar {
+    width: 310px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 14px;
+    padding-top: 38px;
+}
+
+img{
+    width: 180px;
+    height: 80px;
+    float: right;
+}
+
+.secnav {
+    width: 365px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    color: #ccc;
+    padding-left: 65px;
+    padding-top: 38px;
+}
+
+button {
+    background: black;
+    border-radius: 25px;
+    width: 60px;
+    height: 25px;
+    color: #ccc;
+    border: none;
+    margin-top: 31px;
+}

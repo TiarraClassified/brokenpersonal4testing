@@ -1,0 +1,61 @@
+$textcolor: rgb(229, 208, 179);
+$testRed: rgb(221, 128, 74);
+$testgold: #e8da89;
+
+.charts{
+    background: linear-gradient(rgba(0,0,0,1), rgba(221, 128, 74, 0.4));
+    width: 100vw;
+    height: 100vh;
+    color: $testgold;
+}
+
+#back{
+    color: $testgold;
+    text-decoration: none;
+    position: absolute;
+    top: 35px;
+    left: 40px;
+    font-size: 15px;
+}
+
+.qualHeader{
+    padding-top: 80px;
+    height: 120px;
+    width: 100vw;
+    p{
+        text-align: center;
+        font-size: 45px;
+    }
+}
+
+.firstButtons{
+    height: 60px;
+    padding-top: 30px;
+    margin: auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    
+    button{
+        box-shadow: inset 0 0 20px $testRed;
+        border-radius: 5px;
+        margin: 0 3px 0 3px;
+        outline: 0;
+
+    &:hover{
+             box-shadow: -1px 0 20px 5px $textcolor, 1px 0 $textcolor, 0 -1px $textcolor, 0 1px
+        }
+    }
+}
+
+.secondButtons{
+    @extend .firstButtons;
+}
+
+#pie{
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+ 
+}

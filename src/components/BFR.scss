@@ -1,0 +1,65 @@
+.BFRvideo{
+    width: 100vw;
+    height: 600px;
+}
+
+.BFR{
+    background: black;
+    height: 5000px;
+    color: black;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.boutThatRocket p{
+    width: 100vw;
+    padding-top: 40px;
+    text-align: center;
+    font-size: 50px;
+    height: 100px;
+}
+
+.image-paragraph-div{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    width: 100%;
+        p {
+            margin: 20px;
+        }
+}
+
+.intro{
+    padding: 30px;
+}
+
+.soup{
+    @extend .image-paragraph-div;
+    height: 500px;
+}
+
+.image-footer{
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    img{
+        width: 95%;
+        height: 80%;
+        margin: 20px;
+        box-shadow: -1px 0 20px 5px #DECAAF, 1px 0 #DECAAF, 0 -1px #DECAAF, 0 1px #DECAAF;
+    }
+    p{
+        font-size: 14px;
+        margin: 0 0 0 20px;
+    }
+}
+
+.fullWidth{
+    @extend .image-footer;
+    display: flex;
+    flex-direction: column;
+    p{
+        font-size: 18px;
+    }
+}
